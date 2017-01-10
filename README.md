@@ -1,6 +1,8 @@
 # Homechef
 This is the midcourse project for the November 2016 cohort at Craftacademy.se.
 
+[![Build Status](https://travis-ci.org/CraftAcademy/homechef.svg?branch=develop)](https://travis-ci.org/CraftAcademy/homechef)
+[![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/homechef/badge.svg?branch=develop)](https://coveralls.io/github/CraftAcademy/homechef?branch=develop)
 
 ## Getting Started
 
