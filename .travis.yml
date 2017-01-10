@@ -2,6 +2,8 @@ language: ruby
 cache: bundler
 notifications:
   email: false
+  slack:
+    secure: rUAOGovjFdur1TjCcm7+c2Chl4EKaR47W4FhgWVC+BE7Hgr/QEbXr6IVxXiOmLqidPvp/58mkLM/QN8z7YPv/pqmX/E9KHm76ZtP6xvGrjxbihQcY/U1+j/rcyTg9x4VmQmvRhaiOjRzBLUhS2iQ+EZ6TW3PgxCiZO2e5Dwr/ZLW7QtM1E9rsJMY43g3Sl/qgEVF+E4rNRXmDln7pParDzZ04DUVIlzVBeUViIkmyBuVTlqbuKieWmjH1INKFMxsKqM7AAtyZMlshVNpXFOF8a9TTVLB6aU3c4r9zpIC6pNNZavmeews6dTCKdfcqiUy/GijJkzTkvRD7F9wMBdPuUrCTttaVxAgFnCLim+l2R5SuQZTAEcDlYe0TC2UhioELV8F8Yr5XSUQd3y36QHEr8hp+ruDa7TGrrEKmxQFyv51Gq+Ho2pxtg2fnKVsXfe73JOI+yZiSIe1Sr7e3tXnPLykaMfLid1X2XSiot2KteO+1iiYdOhMZ8MIJsjh9J+TeTMEadgi4Gga4gRFSZrPjbeq5hJQO2om8Z3exTdpufiKRuPGBmaP0ssorzc5xmQX+W4+/VQj5f7m709AkjrfWm/DAkc6S/b9DvWQHyz0R3n0wnAoe1cA4ZVDFIqixqcLlcQnmHKhXqCD8sOFY2zoswh+rP3LiNFPTNg/C7mnPMg=
 rvm:
   - 2.3.1
 before_script:
