@@ -1,0 +1,23 @@
+language: ruby
+cache: bundler
+notifications:
+  email: false
+rvm:
+  - 2.3.1
+before_script:
+  - bundle exec rails db:create --all
+  - bundle exec rails db:migrate
+script:
+  - bundle exec rails ci:tests
+services:
+  - postgresql
+deploy:
+  provider: heroku
+  api_key:
+    secure: o2yh4RG22qRN+gyiW17Wo45/ipmOCLR39odTVTmS/QnyALsCiIDN6tGfbd1YUS06+X6/w/dfMpAE/jqPr6o41lMZfxMinzinwaA548WjWiTLYQnCYp6GUAs6Un32ILQviMA7NhPEOX/jWJUSdquVaksceJlnXt9P6S5eb7A7BJkGWZ8be/gGdPLS4So/2tUhjDFx+ZYMbOPX9IJ64Uk1TMJy/fFx381me21jYpKwmeM8SR9F0qSKXZO8uBRBj3SOrPsb5ToyUjQ9SZiOpFyU+4tI/utJoseE3IMs3HKpRM853t+3rfFqStA9hzjbFT85duEH6mC+LajMPJBaFZABrcSPz3L6Av8WzOc62QRUq0k8USd89oB+WCm0UyDXl1Kx86ns21fB83T7XoW8gWGWZQgjKkOqINSnQkFsZ+h/Y1rzkpQE4PIDRJ9EzINRHzxVFUHgSMVGMGtx80RoxzKalwIlGetJ9gdtye9BWg8N3CqjBSjssbrVaeq2HU1AM4gk5PTIE+zwEC+4z+KvPpu1AT2V8SNaSFn2sllA/k+WVc6gBPaoe8VmbIw+x/ql3XslrkHXBg2yqI6Fbk5U/vkVdt3yZN+sc9pCAoKS6Or33uXFKsgj2OBB3qlHbwS+9mQmM/S+c1ku6S0GV5Xvkk0MjU0mxq+o6FtAjrw76q3T1G4=
+  app:
+    develop: homechefs
+  on:
+    repo: CraftAcademy/homechef
+  run:
+    - bundle exec rake db:migrate
