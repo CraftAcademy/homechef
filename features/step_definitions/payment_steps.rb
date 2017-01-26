@@ -18,11 +18,15 @@ When(/^I submit the stripe form$/) do
   end
 end
 
-Then(/^my order should be registered in the system$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 And(/^Show me an image of the page$/) do
   sleep(0.1) until page.evaluate_script('$.active') == 0
   Capybara::Screenshot.screenshot_and_open_image
+end
+
+Given(/^I check out but my card is declined$/) do
+  StripeMock.prepare_card_error(:card_declined)
+  steps %q(
+  And I fill in my card details on the stripe form
+  And I submit the stripe form
+  )
 end
