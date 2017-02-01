@@ -6,7 +6,7 @@ class DishesController < ApplicationController
 
 	def new
 		@user = current_user
-		visit "users/user_#{@user.id}/dishes/new"
+		visit "users/#{@user.id}/dishes/new"
 	end
 
 end
