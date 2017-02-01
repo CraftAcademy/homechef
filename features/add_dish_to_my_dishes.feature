@@ -15,4 +15,3 @@ Feature: Manage dishes on offer
     And I fill in "Pickup time" with "18:00"
     And I upload an image called "meatballs.jpg"
     Then there should be a dish called "Meatballs"
-    # connect the "my dishes page" with the "create dish" interface in the story line 17
