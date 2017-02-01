@@ -29,11 +29,15 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
       visit checkout_index_path
 
 		when 'Add dish to my dishes'
-			steps %{
-				And they are logged in
-			}
-			user = current_user
+			# steps %{
+			# 	And they are logged in with email "email@random.com"
+			# }
+			FactoryGirl.create(:user, email: email)
 			binding.pry
-			visit new_user_dish_path(user)
+			user = User.find_by(email: email)
+			binding.pry
+			current_user = user
+			binding.pry
+			visit new_user_dish_path(current_user)
   end
 end
