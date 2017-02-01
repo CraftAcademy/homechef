@@ -7,7 +7,7 @@ Feature: Manage dishes on offer
     Given that there is a user with email: "email@random.com"
 
   Scenario:
-    When I am on the "My Dishes" page
+    When I am on the "Add dish to offer" page
     And I fill in "Dish name" with "Meatballs"
     And I fill in "Dish description" with "This are like your Swedish mom's homemade meatballs"
     And I fill in "Price" with "59.99"
@@ -15,4 +15,4 @@ Feature: Manage dishes on offer
     And I fill in "Pickup time" with "18:00"
     And I upload an image called "meatballs.jpg"
     Then there should be a dish called "Meatballs"
-
+    # connect the "my dishes page" with the "create dish" interface in the story line 17
