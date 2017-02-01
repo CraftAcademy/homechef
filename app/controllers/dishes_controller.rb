@@ -5,8 +5,8 @@ class DishesController < ApplicationController
 	end
 
 	def new
-		@user = current_user
-		visit "users/#{@user.id}/dishes/new"
+		user = current_user
+		new_user_dish(user)
 	end
 
 end
