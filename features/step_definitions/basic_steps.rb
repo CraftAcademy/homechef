@@ -15,3 +15,20 @@ And(/^that there is a user logged in with an email of "([^"]*)"$/) do |email|
   user = User.find_by(email: email)
   login_as(user, scope: :user)
 end
+
+When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
+  case page
+    when 'landing'
+      visit root_path
+
+    when 'Meatballs'
+      id = Dish.find_by(name: 'meatballs').id
+      visit "/dishes/#{id}"
+
+    when 'Checkout'
+      visit checkout_index_path
+
+		when 'Add dish to my dishes'
+			visit new_user_dish_path
+  end
+end

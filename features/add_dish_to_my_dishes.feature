@@ -7,7 +7,7 @@ Feature: Manage dishes on offer
     Given that there is a user with email: "email@random.com"
 
   Scenario:
-    When I am on the "Add dish to offer" page
+    When I am on the "Add dish to my dishes" page
     And I fill in "Dish name" with "Meatballs"
     And I fill in "Dish description" with "This are like your Swedish mom's homemade meatballs"
     And I fill in "Price" with "59.99"
