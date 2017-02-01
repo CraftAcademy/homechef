@@ -32,9 +32,7 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
 			# steps %{
 			# 	And they are logged in with email "email@random.com"
 			# }
-			FactoryGirl.create(:user, email: email)
-			binding.pry
-			user = User.find_by(email: email)
+			user = User.find_by(email: 'user@random.com')
 			binding.pry
 			current_user = user
 			binding.pry
