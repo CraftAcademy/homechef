@@ -29,6 +29,9 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
       visit checkout_index_path
 
 		when 'Add dish to my dishes'
-			visit new_user_dish_path
+			binding.pry
+			@user = current_user
+			binding.pry
+			visit new_user_dish_path(@user)
   end
 end
