@@ -2,10 +2,12 @@ When(/^I upload an image called "([^"]*)"$/) do |image|
 	attach_file Rails.root.join("spec/fixture/#{image}")
 end
 
-And(/^they are logged in with "([^"]*)" and password "([^"]*)"$/) do |email, password|
-	user = User.find_for_authentication(email: email)
-	is_user = user.valid_password?(password) ? user : nil
-	if is_user != nil
-		@current_user = User.find_by_id(session[user: user])
-	end
+And(/^they are logged in$/) do
+	steps %q{
+		When I am on the "landing" page
+		And I click "Login"
+		Then I fill in "Email" with "kristoffer.user@homechef.com"
+		And I fill in "Password" with "password"
+		And I click "Log in" button
+	}
 end

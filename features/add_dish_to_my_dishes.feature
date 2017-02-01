@@ -5,7 +5,7 @@ Feature: Manage dishes on offer
 
   Background:
     Given that there is a user with email: "email@random.com"
-    And they are logged in with "email@random.com" and password "password"
+    And they are logged in
 
   Scenario:
     When I am on the "Add dish to my dishes" page
