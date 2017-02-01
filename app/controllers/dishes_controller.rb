@@ -6,7 +6,7 @@ class DishesController < ApplicationController
 
 	def new
 		user = current_user
-		new_user_dish(user)
+		new_user_dish_path(user)
 	end
 
 end
