@@ -10,8 +10,6 @@ class DishesController < ApplicationController
 	end
 
 	def new
-		# go here and use the template below: /users/:user_id/dishes/new
-		# visit 'dishes/new.html.erb'
 		redirect_to new_user_dish
 	end
 
