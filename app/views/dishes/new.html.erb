@@ -1,5 +1,6 @@
 <div id="create_dish">
   <%= form_tag do %>
-      <%= text_field_tag 'Dish name' %>
+      <%= label_tag(:dish_name, "Dish name") %>
+      <%= text_field_tag(:dish_name, "Dish name") %>
   <% end %>
 </div>
