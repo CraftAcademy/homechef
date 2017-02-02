@@ -32,8 +32,9 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
 			# steps %{
 			# 	And they are logged in with email "email@random.com"
 			# }
-			user = User.find_by(email: 'user@random.com')
+			user = User.last
 			binding.pry
+			sign_in(user)
 			current_user = user
 			binding.pry
 			visit new_user_dish_path(current_user)
