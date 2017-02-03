@@ -29,14 +29,9 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
       visit checkout_index_path
 
 		when 'Add dish to my dishes'
-			# steps %{
-			# 	And they are logged in with email "email@random.com"
-			# }
-			user = User.last
-			binding.pry
-			sign_in(user)
-			current_user = user
-			binding.pry
-			visit new_user_dish_path(current_user)
+			# visit "users/#{User.last.id}/dishes/new"
+			# binding.pry
+			visit new_user_dish_path(User.last)
+			# binding.pry
   end
 end
