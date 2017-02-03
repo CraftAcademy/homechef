@@ -1,6 +1,14 @@
 <div id="create_dish">
   <%= form_tag do %>
-      <%= label_tag(:dish_name, "Dish name") %>
-      <%= text_field_tag(:dish_name, "Dish name") %>
+      <%= label_tag(:name, "Dish name") %>
+      <%= text_field_tag(:name, "Dish name") %>
+      <%= label_tag(:description, "Dish description") %>
+      <%= text_field_tag(:description, "Dish description") %>
+      <%= label_tag(:price, "Price") %>
+      <%= text_field_tag(:price, "Price") %>
+      <%= label_tag(:portions, "Portions") %>
+      <%= text_field_tag(:portions, "Nr of portions available") %>
+      <%= label_tag(:pickup_time, "Pickup time") %>
+      <%= text_field_tag(:pickup_time, "Pickup time") %>
   <% end %>
 </div>
