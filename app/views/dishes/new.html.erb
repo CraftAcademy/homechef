@@ -1,5 +1,5 @@
 <div id="create_dish">
-  <%= form_tag do %>
+  <%= form_tag "/dishes", method: "post" do %>
       <%= label_tag(:name, "Dish name") %>
       <%= text_field_tag(:name, "Dish name") %>
       <%= label_tag(:description, "Dish description") %>
@@ -9,7 +9,7 @@
       <%= label_tag(:portions, "Portions") %>
       <%= text_field_tag(:portions, "Nr of portions available") %>
       <%= label_tag(:pickup_time, "Pickup time") %>
-      <%= text_field_tag(:pickup_time, "Pickup time") %>
+      <%= text_field_tag(:pickup_time, "Earliest pickup time") %>
       <%= submit_tag("Create dish") %>
   <% end %>
 </div>

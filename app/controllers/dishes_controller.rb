@@ -9,4 +9,9 @@ class DishesController < ApplicationController
 		# redirect to fallback path 'new'
 	end
 
+	def create
+		dish = Dish.create(name: params[:name], description: params[:description],
+											 price: params[:price], portions: params[:portions], pickup_time: params[:pickup_time])
+	end
+
 end
