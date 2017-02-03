@@ -4,6 +4,7 @@ end
 
 When(/^I click "([^"]*)"$/) do |button|
   click_link_or_button button
+
 end
 
 Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, text|
