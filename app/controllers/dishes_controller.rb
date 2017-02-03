@@ -5,8 +5,7 @@ class DishesController < ApplicationController
 	end
 
 	def new
-		binding.pry
-		redirect_to new_user_dish_path(current_user)
+		render "new"
 	end
 
 end
