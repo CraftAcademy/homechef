@@ -5,13 +5,16 @@ class DishesController < ApplicationController
 	end
 
 	def new
-		# update both user and dish model
-		# redirect to fallback path 'new'
 	end
 
 	def create
-		dish = Dish.create(name: params[:name], description: params[:description],
-											 price: params[:price], portions: params[:portions], pickup_time: params[:pickup_time])
+		binding.pry
+		@user_dish = Dish.create(name: params[:name], description: params[:description],
+											 price: params[:price], portions: params[:portions],
+											 pickup_time: params[:pickup_time], user: current_user.id)
+		User.update(dish: @user_dish.id).where(id: current_user.id)
+		redirect_back(fallback_location: user_dish_path(dish.id))
+		flash[:notice] = "#{@user_dish.name} successfully added to your dishes"
 	end
 
 end

@@ -1,15 +1,18 @@
-<div id="create_dish">
+<div id="create_dish" class="form-group" style="width:20vmax;">
+  <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+  <% end %>
   <%= form_tag "/dishes", method: "post" do %>
-      <%= label_tag(:name, "Dish name") %>
-      <%= text_field_tag(:name, "Dish name") %>
-      <%= label_tag(:description, "Dish description") %>
-      <%= text_field_tag(:description, "Dish description") %>
-      <%= label_tag(:price, "Price") %>
-      <%= text_field_tag(:price, "Price") %>
-      <%= label_tag(:portions, "Portions") %>
-      <%= text_field_tag(:portions, "Nr of portions available") %>
-      <%= label_tag(:pickup_time, "Pickup time") %>
-      <%= text_field_tag(:pickup_time, "Earliest pickup time") %>
-      <%= submit_tag("Create dish") %>
+      <%= label_tag(:name, "Dish name") %> <br />
+      <%= text_field_tag(:name, "Name", class: "form-control") %><br />
+      <%= label_tag(:description, "Dish description") %><br />
+      <%= text_area_tag(:description, "Description", class: "form-control", rows: "7") %><br />
+      <%= label_tag(:price, "Price") %><br />
+      <%= text_field_tag(:price, "$", class: "form-control") %><br />
+      <%= label_tag(:portions, "Nr of portions available") %><br />
+      <%= text_field_tag(:portions, "1", class: "form-control") %><br />
+      <%= label_tag(:pickup_time, "Earliest pickup time") %><br />
+      <%= text_field_tag(:pickup_time, "00:00", class: "form-control") %><br />
+      <%= submit_tag "Create dish", class: "btn btn-primary btn-m pull-right" %>
   <% end %>
 </div>
