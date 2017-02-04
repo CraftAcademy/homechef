@@ -1,7 +1,4 @@
 <div id="create_dish" class="form-group" style="width:20vmax;">
-  <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-  <% end %>
   <%= form_tag user_dishes_path do %>
       <%= label_tag(:name, "Dish name") %> <br />
       <%= text_field_tag(:name, "Name", class: "form-control") %><br />
