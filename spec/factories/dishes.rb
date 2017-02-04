@@ -5,5 +5,6 @@ FactoryGirl.define do
     price 1
     ready_time "2017-01-10 16:32:43"
     portions 1
+		user User.last
   end
 end
