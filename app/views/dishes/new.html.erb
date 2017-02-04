@@ -2,7 +2,7 @@
   <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
   <% end %>
-  <%= form_tag "/dishes", method: "post" do %>
+  <%= form_tag user_dishes_path do %>
       <%= label_tag(:name, "Dish name") %> <br />
       <%= text_field_tag(:name, "Name", class: "form-control") %><br />
       <%= label_tag(:description, "Dish description") %><br />
@@ -11,8 +11,8 @@
       <%= text_field_tag(:price, "$", class: "form-control") %><br />
       <%= label_tag(:portions, "Nr of portions available") %><br />
       <%= text_field_tag(:portions, "1", class: "form-control") %><br />
-      <%= label_tag(:pickup_time, "Earliest pickup time") %><br />
-      <%= text_field_tag(:pickup_time, "00:00", class: "form-control") %><br />
+      <%= label_tag(:ready_time, "Earliest pickup time") %><br />
+      <%= text_field_tag(:ready_time, "00:00", class: "form-control") %><br />
       <%= submit_tag "Create dish", class: "btn btn-primary btn-m pull-right" %>
   <% end %>
 </div>
