@@ -5,6 +5,6 @@ FactoryGirl.define do
     price 1
     ready_time "2017-01-10 16:32:43"
     portions 1
-		user User.last
+		user User.create(email: "email@someplace.es", password: "123456", password_confirmation: "123456")
   end
 end
