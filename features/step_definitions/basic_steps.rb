@@ -4,7 +4,6 @@ end
 
 When(/^I click "([^"]*)"$/) do |button|
   click_link_or_button button
-  binding.pry
 end
 
 Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, text|
