@@ -41,8 +41,8 @@ Then(/^I should be on the "([^"]*)" page$/) do |current_page|
 end
 
 Then(/^there should be a dish called "([^"]*)"$/) do |dish_name|
-	dish = Dish.last
-	expect(dish.name).to eq dish_name
+  dish = Dish.last
+  expect(dish.name).to eq dish_name
 end
 
 Then(/^"([^"]*)" should have name "([^"]*)"$/) do |email, name|
