@@ -13,5 +13,6 @@ Feature: Manage dishes on offer
     And I fill in "Price" with "59"
     And I fill in "Nr of portions available" with "5"
     And I fill in "Earliest pickup time" with "18:00"
+    And I fill in "Pickup address" with "Storgatan 1, Stockholm"
     And I click "Create dish"
     Then I should see "5 portions of Meatballs at 59$ each successfully added to your dishes"
