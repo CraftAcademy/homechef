@@ -4,10 +4,13 @@ Feature: Manage dishes on offer
   I would like to add dishes
 
   Background:
-    Given that there is a user logged in with an email of "email@random.com"
+    Given that there is a session with lat and lng near "somewhere in America"
+    And that there is a user logged in with an email of "email@random.com"
+
 
   Scenario:
-    When I am on the "Add dish to my dishes" page
+    When I am on the "landing" page
+    And I click "Add dish"
     And I fill in "Dish name" with "Meatballs"
     And I fill in "Dish description" with "This are like your Swedish mom's homemade meatballs"
     And I fill in "Price" with "59"
