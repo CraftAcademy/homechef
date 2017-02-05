@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, path: 'dishes'
+  devise_for :users, path: 'users', controllers: {registrations: 'registrations'}
 	resources :users do
-		resources :dishes, only: [:new, :create]
+		resources :dishes, only: [:index, :show, :new, :create]
 	end
-  devise_for :users, controllers: {registrations: 'registrations'}
   root controller: :landing, action: :index
-  resources :dishes, only: [:index, :show]
   resources :checkout, only: [:index]
   resources :charges, only: [:create]
   post :add_to_order, controller: :orders, action: :add_to_order
