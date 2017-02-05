@@ -1,7 +1,10 @@
 # Homechef
 This is the midcourse project for the Nov -16 cohort from Craft Academy Bootcamp. A project that will develop into a website where users can buy homecooked food from amateur homechefs.
 
+### Pivotal Tracker
+[Pivotal](https://www.pivotaltracker.com/n/projects/)
 
+### Build
 [![Build Status](https://travis-ci.org/CraftAcademy/homechef.svg?branch=develop)](https://travis-ci.org/CraftAcademy/homechef)
 
 ### Coverage
@@ -13,26 +16,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+To be able to install and run the application you need to have Rails 5 and PostgreSQL installed.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-
-Fork and clone repo, then:
+Fork and clone repo, then run:
 ```
-Give the example
+$ bundle install
 ```
 
-And repeat
+And then:
 
 ```
-until finished
+$rake db:migrate db:seed
 ```
 
 ## Running the tests
@@ -55,27 +51,33 @@ $ travis encrypt $(heroku auth:token) —add deploy.api_key
 
 ## Built With
 
-* [Travis](https://travis-ci.org) - Used for continous integration
-* [Coveralls](https://coveralls.io) - To track code coverage
-* [Heroku](http://heroku.com/) - For deployment
-* [Ruby on Rails](http://rubyonrails.org) — Web Framework
-* [Devise](https://github.com/plataformatec/devise) — Authentication library
-* [Twitter Bootstrap](http://getbootstrap.com) — Front-end framework
-* [Stripe](https://github.com/stripe/stripe-ruby) - Payment solution
+  * [Travis](https://travis-ci.org) - Used for continous integration
+  * [Coveralls](https://coveralls.io) - To track code coverage
+  * [Heroku](http://heroku.com/) - For deployment
+  * [Ruby on Rails](http://rubyonrails.org) — Web Framework
+  * [Devise](https://github.com/plataformatec/devise) — Authentication library
+  * [Twitter Bootstrap](http://getbootstrap.com) — Front-end framework
+  * [Stripe](https://github.com/stripe/stripe-ruby) - Payment solution
 
-## Contributing
+For testing purposes we used:
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+  * Pry
+  * Pry-byebug
+  * Rspec-rails
+  * Shoulda-matchers
+  * Factory_girl_rails
+  * Cucumber-rails
+  * Database_cleaner
+  * Capybara
+  * Capybara-screenshot
+  * Poltergeist
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+  * **Craft Academy** - [CraftAcademy](https://github.com/CraftAcademy)
+  * **Ebba Aniansson** - [aniansson](https://github.com/aniansson)
+  * **Kristoffer Karlsson** - [kriizjones](https://github.com/kriizjones)
+  * **Philip Zudemberg** - [Philippoes](https://github.com/Philippoes)
+  * **Rodrigo Muños** - [rmzse](https://github.com/rmzse)
 
 ## License
 
@@ -84,3 +86,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * https://github.com/crowdint/acts_as_shopping_cart
+* https://github.com/geokit/geokit-rails
