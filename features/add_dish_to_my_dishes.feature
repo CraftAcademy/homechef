@@ -21,4 +21,3 @@ Feature: Manage dishes on offer
     And I fill in "Pickup address" with "Storgatan 1, Stockholm"
     And I click "Create dish"
     Then I should see "Successfully added 5 portions of Meatballs at 59.99$ each to your dishes"
-    And show me the page
