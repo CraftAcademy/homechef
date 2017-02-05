@@ -9,7 +9,7 @@
       <%= label_tag(:portions, "Nr of portions available") %><br/>
       <%= text_field_tag(:portions, "1", class: "form-control") %><br/>
       <%= label_tag(:ready_time, "Earliest pickup time") %><br/>
-      <%= text_field_tag(:ready_time, "00:00", class: "form-control") %><br/>
+      <%= datetime_field(:dish, :ready_time, class: "form-control") %><br/>
       <%= label_tag(:address, "Pickup address") %><br/>
       <%= text_field_tag(:address, "Address", class: "form-control") %><br/>
       <%= submit_tag "Create dish", class: "btn btn-primary btn-m pull-right" %>
