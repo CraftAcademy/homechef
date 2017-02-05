@@ -6,8 +6,10 @@ class DishesController < ApplicationController
 
 	def create
 		location = GoogleGeocoder.geocode(params[:address])
-		@user_dish = Dish.create(name: params[:name], description: params[:description], price: params[:dish][:price], portions: params[:dish][:portions], ready_time: params[:dish][:ready_time], lat:location.lat, lng:location.lng, user: current_user)
+		binding.pry
+		@user_dish = Dish.create(name: params[:name], description: params[:description], price: params[:price], portions: params[:dish][:portions], ready_time: params[:dish][:ready_time], lat:location.lat, lng:location.lng, user: current_user)
+		binding.pry
 		redirect_back(fallback_location: new_user_dish_path(current_user))
-		flash[:notice] = "#{@user_dish.portions} portions of #{@user_dish.name} at #{@user_dish.price}$ each successfully added to your dishes"
+		flash[:notice] = "Successfully added  #{@user_dish.portions} portions of #{@user_dish.name} at #{@user_dish.price}$ each to your dishes"
 	end
 end
