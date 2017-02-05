@@ -2,28 +2,21 @@
 <label>Search by address:</label>
 <%= form_tag(search_by_address_path) do %>
     <%= text_field_tag 'address' %>
-    <%= submit_tag 'Search', class: 'btn btn-danger' %>
+    <%= submit_tag 'Search', class: 'btn btn-primary' %>
 <% end %>
 <ul>
   <div class="row">
     <% @dishes.each do |dish| %>
         <div class="col-lg-1">
-          <li id="dish_<%= dish.id %>" style="list-style-type: none;">
-            <div class="col" style="text-align: center; font-size: large; margin-top:20px">
+          <li class="dish-map-display-li" id="dish_<%= dish.id %>">
+            <div class="col-lg-5 col-lg-offset-2 dish-map-pin">
               <%= dish.name.humanize %><br/>
+              <button type="button" id="dish-<%= dish.id %>" class="btn btn-default"
+                      data-toggle="modal" data-target="#dish<%= dish.id %>Modal">
+                <span class="glyphicon-plus"></span></button>
             </div>
             <div class="row">
               <div class="col-lg-2 col-lg-offset-5">
-                <button type="button" id="dish-<%= dish.id %>" class="btn btn-default" style="
-                width: 25px;
-                    height: 25px;
-                    text-align: center;
-                    line-height: 50%;
-                    padding-left: 5px;
-                    border-radius: 50%;
-                    background: transparent;"
-                        data-toggle="modal" data-target="#dish<%= dish.id %>Modal">
-                  <span class="glyphicon-plus" style="font-size: 25px;"></span></button>
                 <div id="dish<%= dish.id %>Modal" class="modal fade" role="dialog">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -61,7 +54,7 @@
                                   <h4 class="price"><span><%= dish.portions %></span> portions left</h4>
                                   <%= form_tag add_to_order_path, id: "dish-#{dish.id}" do %>
                                       <%= hidden_field_tag :dish_id, dish.id %>
-                                      <%= submit_tag "Add dish to order", class: "btn btn-default" %>
+                                      <%= submit_tag "Add dish to order", class: "btn btn-primary" %>
                                   <% end %>
                                   <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
                                   </button>
