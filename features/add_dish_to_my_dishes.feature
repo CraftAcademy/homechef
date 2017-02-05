@@ -1,5 +1,3 @@
-#@javascript
-
 Feature: Manage dishes on offer
   As a selling User,
   In order make my dishes available for purchase
@@ -8,7 +6,6 @@ Feature: Manage dishes on offer
   Background:
     Given that there is a session with lat and lng near "somewhere in America"
     And that there is a user logged in with an email of "email@random.com"
-
 
   Scenario:
     When I am on the "landing" page
@@ -20,4 +17,4 @@ Feature: Manage dishes on offer
     And I fill in "Earliest pickup time" with "2017-02-17 18:00"
     And I fill in "Pickup address" with "Storgatan 1, Stockholm"
     And I click "Create dish"
-    Then I should see "Successfully added 5 portions of Meatballs at 59.99$ each to your dishes"
+    Then I should see "Successfully added 5 portions of Meatballs at $59.99 each to your dishes"

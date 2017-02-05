@@ -16,7 +16,6 @@ And(/^that there is a user logged in with an email of "([^"]*)"$/) do |email|
   login_as(user, scope: :user)
 end
 
-
 When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
   case page
     when 'landing'
@@ -36,7 +35,6 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
       visit edit_user_registration_path
   end
 end
-
 
 Given(/^that there is a session with lat and lng near "([^"]*)"$/) do |place|
   case place
