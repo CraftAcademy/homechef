@@ -49,4 +49,3 @@ Then(/^"([^"]*)" should have name "([^"]*)"$/) do |email, name|
   user=User.find_by(email: email)
   expect(user.first_name).to eq name
 end
-

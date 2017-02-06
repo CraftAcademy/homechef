@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-
   private
 
   def account_update_params
@@ -11,6 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
                                   :city,
                                   :phone,
                                   :email,
+                                  :about_me,
                                   :password,
                                   :password_confirmation,
                                   :current_password)
