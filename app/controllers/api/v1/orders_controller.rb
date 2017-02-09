@@ -9,13 +9,13 @@ class Api::V1::OrdersController < ApiController
       render json: { message: "Something went wrong, you did not add a dish to your order" }, status: :unprocessable_entity and return
     end
     @order.add(dish, dish.price)
-    render json: {message: "Successfully added Pizza"}, status: :ok
+    render json: {message: "Successfully added #{dish}"}, status: :ok
   end
 
   private
 
   def create_order
     user = current_api_v1_user
-    @order = Order.create(user: user)
+    Order.find_by(user: user) != nil ? @order = Order.find_by(user: user) : @order = Order.create(user: user)
   end
 end
