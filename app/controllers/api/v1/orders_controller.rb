@@ -9,7 +9,7 @@ class Api::V1::OrdersController < ApiController
       render json: { message: "Something went wrong, you did not add a dish to your order" }, status: :unprocessable_entity and return
     end
     @order.add(dish, dish.price)
-    render json: {message: "Successfully added #{dish}"}, status: :ok
+    render json: {message: "Successfully added #{dish.name}"}, status: :ok
   end
 
   private

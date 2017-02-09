@@ -10,7 +10,7 @@ RSpec.describe Api::V1::OrdersController, type: :request do
     it 'should add a dish to order' do
       post '/api/v1/orders', params: {
         dish_id: dish.id }, headers: headers
-      expect(response_json['message']).to eq "Successfully added Pizza"
+      expect(response_json['message']).to eq "Successfully added #{dish.name}"
       expect(response.status).to eq 200
     end
 
